@@ -1,0 +1,21 @@
+﻿<Window x:Class="FallDetect.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FallDetect"
+        mc:Ignorable="d"
+        xmlns:my="clr-namespace:Microsoft.Samples.Kinect.WpfViewers;assembly=Microsoft.Samples.Kinect.WpfViewers"
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
+    <Grid>
+        <my:KinectSensorChooser HorizontalAlignment="Left"  Name="kinectSensorChooser1" VerticalAlignment="Top" Width="89" Height="76" Margin="207,0,0,0" />
+        <my:KinectDepthViewer HorizontalAlignment="Left"  Name="kinectDepthViewer1" VerticalAlignment="Top" Height="206" Width="222" Kinect="{Binding ElementName=kinectSensorChooser1, Path=Kinect}" Margin="0,103,0,0" />
+        <my:KinectSkeletonViewer HorizontalAlignment="Left"  Name="kinectSkeletonViewer1" VerticalAlignment="Top" Height="206" Width="232" Kinect="{Binding ElementName=kinectSensorChooser1, Path=Kinect}" Margin="285,103,0,0" />
+        <Label x:Name="points" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="diff1" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="338,0,0,0"/>
+        <Label x:Name="diff2" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="338,26,0,0"/>
+        <Label x:Name="diff3" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="338,0,0,247"/>
+        <Label x:Name="diff4" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="338,72,0,0"/>
+        <Label x:Name="diff5" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="427,72,0,0"/>
+    </Grid>
+</Window>
